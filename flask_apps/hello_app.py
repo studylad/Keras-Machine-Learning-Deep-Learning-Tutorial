@@ -8,7 +8,5 @@ app = Flask(__name__)
 def hello():
     message = request.get_json(force=True)
     name = message['name']
-    response = {
-        'greeting': 'Hello, ' + name + '!'
-    }
+    response = {'greeting': f'Hello, {name}!'}
     return jsonify(response)
